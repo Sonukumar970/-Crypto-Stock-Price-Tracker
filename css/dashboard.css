@@ -1,0 +1,37 @@
+.dashboard {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+#search {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  margin: 1rem auto;
+  border-radius: 10px;
+  width: 200px;
+}
+
+#gainers, #losers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}

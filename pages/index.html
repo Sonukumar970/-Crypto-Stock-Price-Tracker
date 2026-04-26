@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoDash</title>
+
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<main class="dashboard">
+
+  <h1>CryptoDash</h1>
+
+  <input id="search" placeholder="Search (bitcoin, ethereum)">
+
+  <div id="results"></div>
+
+  <section>
+    <h2>My Favorites</h2>
+    <ul id="favList"></ul>
+  </section>
+
+  <canvas id="priceChart"></canvas>
+
+
+  <!-- Converter -->
+  <div class="converter">
+    <input type="number" id="usdInput" placeholder="USD">
+    <p id="inrOutput"></p>
+  </div>
+
+  <!-- Trends -->
+  <h2>Top Gainers</h2>
+  <div id="gainers"></div>
+
+  <h2>Top Losers</h2>
+  <div id="losers"></div>
+
+  <!-- Loader -->
+  <div id="loader" style="display:none;">Loading...</div>
+
+</main>
+
+<div id="footer"></div>
+
+<script type="module" src ="../js/loader.js"></script>
+<script type ="module"  src="../js/api.js"> </script>
+<script type="module" src="../js/dashboard.js"></script>
+
+</body>
+</html>

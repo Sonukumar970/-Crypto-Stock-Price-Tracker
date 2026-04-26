@@ -1,0 +1,76 @@
+.logo {
+  width: 120px;
+  
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+li {
+  cursor: pointer;
+}
+/* TITLE */
+.title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+/* GRID */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* LIST */
+.card ul {
+  padding-left: 20px;
+}
+
+/* DARK MODE */
+.dark .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .intro {
+  color: #ccc;
+}

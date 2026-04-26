@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: rgb(179, 219, 232);
+  color: #333;
+}
+
+/* ===== FORCE FULL DARK MODE ===== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* FULL PAGE DARK */
+body.dark {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
+}
+
+/* ALL TEXT */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark li {
+  color: #e2e8f0 !important;
+}
+
+/* MAIN SECTION FIX */
+body.dark main {
+  background-color: #0f172a !important;
+}
+
+/* CONTAINER FIX */
+body.dark .container {
+  background: transparent !important;
+}
+
+/* ABOUT PAGE FIX */
+body.dark .about {
+  background: transparent !important;
+}
+
+/* INTRO TEXT */
+body.dark .intro {
+  color: #cbd5f5 !important;
+}
+
+/* CARDS */
+body.dark .card {
+  background: #1e293b !important;
+  color: #e2e8f0 !important;
+}
+
+/* INPUT */
+body.dark input {
+  background: #1e293b !important;
+  color: white !important;
+  border: 1px solid #334155;
+}
+
+/* LINKS */
+body.dark a {
+  color: #38bdf8 !important;
+}
+
+/* CANVAS */
+body.dark canvas {
+  background: #1e293b !important;
+}

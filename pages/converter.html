@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter – CryptoDash</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div id="header"></div>
+
+  <!-- MAIN -->
+  <main class="container converter-page">
+
+    <h1>💱 Currency Converter</h1>
+
+   <div class="converter-card">
+
+  <input type="number" id="amount" placeholder="Enter Amount" />
+
+  <!-- SELECT TARGET ONLY -->
+  <select id="currency">
+    <option value="INR">INR 🇮🇳</option>
+    <option value="USD">USD 🇺🇸</option>
+    <option value="EUR">EUR 🇪🇺</option>
+    <option value="GBP">GBP 🇬🇧</option>
+    <option value="JPY">JPY 🇯🇵</option>
+  </select>
+
+  <button id="convertBtn">Convert</button>
+
+  <h2 id="result"></h2>
+
+</div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <div id="footer"></div>
+
+  <!-- JS -->
+  <script src="../js/loader.js"></script>
+  <script src="../js/converter.js"></script>
+
+</body>
+</html>

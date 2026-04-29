@@ -1,60 +1,51 @@
-async function loadComponent(id, file) {
-  try {
-    const res = await fetch(file);
-    const html = await res.text();
+// ==========================
+// LOAD HEADER
+// ==========================
+fetch("../components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
 
-    document.getElementById(id).innerHTML = html;
+    // 🔥 Header load hone ke baad toggle setup karo
+    setupToggle();
+  });
 
-    // Apply theme immediately after header loads
-    applySavedTheme();
 
-  } catch (err) {
-    console.error("Component load error:", err);
-  }
-}
+// ==========================
+// LOAD FOOTER
+// ==========================
+fetch("../components/footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
 
-/* =========================
-   APPLY SAVED THEME
-========================= */
-function applySavedTheme() {
-  const saved = localStorage.getItem("theme");
 
-  if (saved === "dark") {
+// ==========================
+// DARK MODE FUNCTION
+// ==========================
+function setupToggle() {
+  const toggle = document.getElementById("darkToggle");
+
+  // 🔥 Page load par theme apply karo
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark") {
     document.body.classList.add("dark");
   } else {
     document.body.classList.remove("dark");
   }
 
-  updateToggleIcon();
-}
+  // 🔥 Toggle click event
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
 
-/* =========================
-   EVENT DELEGATION (🔥 KEY)
-========================= */
-document.addEventListener("click", (e) => {
-  if (e.target.id === "darkToggle") {
-    document.body.classList.toggle("dark");
-
-    const isDark = document.body.classList.contains("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-
-    updateToggleIcon();
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
   }
-});
-
-/* =========================
-   ICON UPDATE
-========================= */
-function updateToggleIcon() {
-  const btn = document.getElementById("darkToggle");
-
-  if (!btn) return;
-
-  btn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 }
-
-/* =========================
-   LOAD COMPONENTS
-========================= */
-loadComponent("header", "../components/header.html");
-loadComponent("footer", "../components/footer.html");

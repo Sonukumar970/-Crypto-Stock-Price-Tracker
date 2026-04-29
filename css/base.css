@@ -6,8 +6,9 @@
 }
 
 body {
-  background: rgb(179, 219, 232);
-  color: #333;
+  /* background: rgba(0, 0, 0, 0.566); */
+    background: linear-gradient(135deg, #38bff8, #8c77f7f6);
+    color: #333;
 }
 
 /* ===== FORCE FULL DARK MODE ===== */

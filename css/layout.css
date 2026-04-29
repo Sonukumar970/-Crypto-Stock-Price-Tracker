@@ -4,7 +4,7 @@
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;   /* 🔥 better spacing */
+  padding: 0 24px;   
 }
 
 /* =========================
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 65px;   /* थोड़ा बढ़ाया for better look */
+  height: 65px;   
 }
 
 /* =========================
@@ -37,7 +37,7 @@
 
 /* LOGO IMAGE */
 .logo img {
-  width: 36px;   /* 🔥 थोड़ा छोटा किया (clean look) */
+  width: 36px;  
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
@@ -45,7 +45,7 @@
 
 /* LOGO TEXT */
 .logo h2 {
-  font-size: 18px;
+  font-size: 25px;
   margin: 0;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -55,14 +55,15 @@
    NAVIGATION
 ========================= */
 nav {
+  margin-left: auto;   
   display: flex;
+  gap: 15px;
   align-items: center;
 }
 
 nav a {
   color: #e2e8f0;
   text-decoration: none;
-  margin-left: 20px;
   font-weight: 500;
   transition: 0.3s;
 }
@@ -141,25 +142,174 @@ main {
 /* =========================
    RESPONSIVE
 ========================= */
+/* =========================
+   RESPONSIVE (FIXED)
+========================= */
+/* ===== FINAL MOBILE FIX ===== */
 @media (max-width: 768px) {
 
+  /* FORCE FULL WIDTH */
+  .header,
   .header .container {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 10px 15px !important;
   }
 
-  .logo {
-    justify-content: center;
+  /* STACK HEADER */
+  .header .container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    height: auto !important;
   }
 
+  /* NAV FIX */
   nav {
-    margin-top: 5px;
-    gap: 15px;
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
   }
 
+  nav a {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* TOGGLE RIGHT */
+  .toggle-btn {
+    margin-left: auto;
+  }
+
+  /* FIX MAIN CENTER */
+  .dashboard {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  /* SEARCH FULL WIDTH */
+  #search {
+    width: 100%;
+  }
+
+  /* CARDS STACK */
+  #gainers,
+  #losers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* REMOVE SCROLL */
+  body {
+    overflow-x: hidden;
+  }
+}
+  /* FOOTER STACK */
   .footer-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
+
+  /* GLOBAL FIX */
+  body {
+    overflow-x: hidden;
+  }
+
+/* HEADER WRAPPER FIX */
+#header {
+  width: 100%;
+}
+
+/* MOBILE FINAL FIX */
+@media (max-width: 768px) {
+  #header .header .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* NAV FIX */
+  #header nav {
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  #header nav a {
+    font-size: 14px;
+  }
+
+  /* TOGGLE RIGHT */
+  #header .toggle-btn {
+    margin-left: auto;
+  }
+
+}
+/* =========================
+   FOOTER (PRO FIX)
+========================= */
+.footer {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  color: #cbd5f5;
+  padding: 40px 20px 15px;
+  text-align: center;
+}
+
+/* GRID STYLE */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* HEADINGS */
+.footer h3,
+.footer h4 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer a {
+  color: #cbd5f5;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #38bdf8;
+}
+
+/* COPYRIGHT */
+.footer .copyright {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .footer-content {
+    grid-template-columns: 1fr;  /* 🔥 stack */
+    text-align: center;
+  }
+
 }

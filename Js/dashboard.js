@@ -125,16 +125,16 @@ window.loadCoin = async function (coin) {
 /* =========================
    CONVERTER
 ========================= */
-if (usdInput) {
-  usdInput.addEventListener("input", () => {
-    if (!usdInput.value) {
-      inrOutput.innerText = "";
-      return;
-    }
+// if (usdInput) {
+//   usdInput.addEventListener("input", () => {
+//     if (!usdInput.value) {
+//       inrOutput.innerText = "";
+//       return;
+//     }
 
-    inrOutput.innerText = `₹${usdToInr(usdInput.value)}`;
-  });
-}
+//     inrOutput.innerText = `₹${usdToInr(usdInput.value)}`;
+//   });
+// }
 
 /* =========================
    TRENDS (GAINERS / LOSERS)
